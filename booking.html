@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+
+<!-- Header Section -->
+    <header class="header">
+        <div class="header-top">
+
+            <a class="main-logo" href="index.html">
+                <img src="assets/images/logo.png" alt="Island Logo">
+            </a>
+
+            <nav class="searchbar">
+                <form class="search-form" action="#" method="get">
+                    <label class="search-label" for="q">Search</label>
+                    <input class="search-input" type="search" id="q" name="q" placeholder="Search">
+                    <button class="search-button" type="submit">Search</button>
+                </form>
+            </nav>
+        </div>
+
+        <nav class="primary_nav">
+            <ul class="nav-list">
+                <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="booking.html">Booking</a></li>
+                <li class="nav-item"><a class="nav-link" href="entertain.html">Entertainment & Transportation</a></li>
+                <li class="nav-item"><a class="nav-link" href="faq.html">FAQ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!-- Main Section -->
+    <main id="main">
+        <section class="page-title">
+            <h1>Booking Request</h1>
+            <p>Please complete the form below and we’ll contact you to confirm availability.</p>
+            <p class="prototype_note">Prototype only — this form does not submit.</p>
+        </section>
+
+        <section class="booking_form_section">
+            <form class="booking_form" action="#" method="post" novalidate>
+                <div class="form_row">
+                    <div class="field">
+                        <label class="field_label" for="first-name">First Name</label>
+                        <input class="field_input" id="first-name" name="firstName" type="text" required>
+                    </div>
+
+                    <div class="field">
+                        <label class="field_label" for="last-name">Last Name</label>
+                        <input class="field_input" id="last-name" name="lastName" type="text" required>
+                    </div>
+                </div>
+
+                <div class="form_row">
+                    <div class="field">
+                        <label class="field_label" for="days-stay">Days of Stay</label>
+                        <input class="field_input" id="days-stay" name="daysStay" type="number" min="1" step="1" required>
+                    </div>
+
+                    <div class="field">
+                        <label class="field_label" for="party-size">Number of People in Party</label>
+                        <input class="field_input" id="party-size" name="partySize" type="number" min="1" step="1" required>
+                    </div>
+                </div>
+
+                <div class="form_row">
+                    <div class="field">
+                        <label class="field_label" for="reason-stay">Reason for Stay</label>
+                        <input class="field_input" id="reason-stay" name="reasonStay" type="text" placeholder="Vacation, honeymoon, business, etc." required>
+                    </div>
+                </div>
+
+                <div class="form_row">
+                    <div class="field">
+                        <label class="field_label" for="phone">Phone Number</label>
+                        <input class="field_input" id="phone" name="phone" type="tel" placeholder="(555) 555-5555" required>
+                    </div>
+
+                    <div class="field">
+                        <label class="field_label" for="email">Email</label>
+                        <input class="field_input" id="email" name="email" type="email" autocomplete="email" required>
+                    </div>
+                </div>
+
+                <div class="form_row">
+                    <div class="field field_full">
+                        <label class="field_label" for="message">Message</label>
+                        <textarea class="field_textarea" id="message" name="message" rows="5" maxlength="1000" placeholder="Details such as special accommodations or preferences…" required></textarea>
+                    </div>
+                </div>
+
+                <div class="form_row">
+                    <div class="field field_full">
+                        <h2 class="subheading">Availability Calendar (Prototype)</h2>
+                        <p class="calendar_hint">Example only — days marked “Booked” are unavailable.</p>
+
+                        <div class="calendar">
+                            <div class="calendar_header">
+                                <button class="calendar_btn" type="button" disabled>&lt;</button>
+                                <span class="calendar_month">June 2025</span>
+                                <button class="calendar_btn" type="button" disabled>&gt;</button>
+                            </div>
+                            <div class="calendar_grid">
+                                <div class="calendar_cell calendar_dow">Sun</div>
+                                <div class="calendar_cell calendar_dow">Mon</div>
+                                <div class="calendar_cell calendar_dow">Tue</div>
+                                <div class="calendar_cell calendar_dow">Wed</div>
+                                <div class="calendar_cell calendar_dow">Thu</div>
+                                <div class="calendar_cell calendar_dow">Fri</div>
+                                <div class="calendar_cell calendar_dow">Sat</div>
+
+                                <!-- Leading blanks for layout -->
+                                <div class="calendar_cell blank"></div>
+                                <div class="calendar_cell blank"></div>
+
+                                <!-- Example days -->
+                                <button class="calendar_cell day available" type="button">1</button>
+                                <button class="calendar_cell day available" type="button">2</button>
+                                <button class="calendar_cell day booked" type="button" disabled>3</button>
+                                <button class="calendar_cell day available" type="button">4</button>
+                                <button class="calendar_cell day available" type="button">5</button>
+                                <button class="calendar_cell day booked" type="button" disabled>6</button>
+                                <button class="calendar_cell day available" type="button">7</button>
+
+                                <button class="calendar_cell day available" type="button">8</button>
+                                <button class="calendar_cell day available" type="button">9</button>
+                                <button class="calendar_cell day available" type="button">10</button>
+                                <button class="calendar_cell day booked" type="button" disabled>11</button>
+                                <button class="calendar_cell day available" type="button">12</button>
+                                <button class="calendar_cell day available" type="button">13</button>
+                                <button class="calendar_cell day available" type="button">14</button>
+
+                                <button class="calendar_cell day booked" type="button" disabled>15</button>
+                                <button class="calendar_cell day available" type="button">16</button>
+                                <button class="calendar_cell day available" type="button">17</button>
+                                <button class="calendar_cell day available" type="button">18</button>
+                                <button class="calendar_cell day booked" type="button" disabled>19</button>
+                                <button class="calendar_cell day available" type="button">20</button>
+                                <button class="calendar_cell day available" type="button">21</button>
+
+                                <button class="calendar_cell day available" type="button">22</button>
+                                <button class="calendar_cell day booked" type="button" disabled>23</button>
+                                <button class="calendar_cell day available" type="button">24</button>
+                                <button class="calendar_cell day available" type="button">25</button>
+                                <button class="calendar_cell day available" type="button">26</button>
+                                <button class="calendar_cell day booked" type="button" disabled>27</button>
+                                <button class="calendar_cell day available" type="button">28</button>
+
+                                <button class="calendar_cell day available" type="button">29</button>
+                                <button class="calendar_cell day available" type="button">30</button>
+                            </div>
+                            <div class="calendar_legend">
+                                <span class="legend_item"><span class="legend_swatch available"></span>Available</span>
+                                <span class="legend_item"><span class="legend_swatch booked"></span>Booked</span>
+                            </div>
+                        </div>
+
+                        <div class="field date_picker_fallback">
+                            <label class="field_label" for="checkin">Preferred Check-in Date</label>
+                            <input class="field_input" id="checkin" name="checkin" type="date">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form_actions">
+                    <button class="button button_primary" type="submit">Submit Request</button>
+                    <p class="prototype_note">Prototype only — this form does not submit.</p>
+                </div>
+            </form>
+        </section>
+
+        <section class="booking_photos">
+            <h2>Island Preview</h2>
+            <div class="photo_grid">
+                <figure class="photo_item">
+                    <img src="assets/images/beach2.jpg" alt="Beachfront view">
+                    <figcaption>Rocky and sandy beaches</figcaption>
+                </figure>
+                <figure class="photo_item">
+                    <img src="assets/images/rainforest2.jpg" alt="Rainforest trail">
+                    <figcaption>Rainforest hikes</figcaption>
+                </figure>
+                <figure class="photo_item">
+                    <img src="assets/images/volcano.jpg" alt="Volcano landscape">
+                    <figcaption>Active volcano vistas</figcaption>
+                </figure>
+                <figure class="photo_item">
+                    <img src="assets/images/enterain.jpg" alt="Nightlife">
+                    <figcaption>Nightlife!</figcaption>
+                </figure>
+                <figure class="photo_item">
+                    <img src="assets/images/crab.jpg" alt="Crab">
+                    <figcaption>Nature attractions!</figcaption>
+                </figure>
+                <figure class="photo_item">
+                    <img src="assets/images/resort2.jpg" alt="Resorts">
+                    <figcaption>Visit our resorts</figcaption>
+                </figure>
+                <figure class="photo_item">
+                    <img src="assets/images/beach3.jpg" alt="Beachfront view">
+                    <figcaption>Endless beaches</figcaption>
+                </figure>
+                <figure class="photo_item">
+                    <img src="assets/images/entertain2.jpg" alt="Dancing">
+                    <figcaption>Endless entertainment</figcaption>
+                </figure>
+                <figure class="photo_item">
+                    <img src="assets/images/beach-town.jpg" alt="Resort">
+                    <figcaption>Endless fun</figcaption>
+                </figure>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <section class="footer-top">
+            <form class="quick_contact" action="#" method="post" novalidate>
+                <h2 class="footer_heading">Quick Contact</h2>
+                <p class="quick_contact_hint">
+                    Short questions only. For booking, visit the <a href="booking.html">Booking Page</a>.
+                </p>
+
+                <div class="field">
+                    <label class="field_label" for="qc-name">Name</label>
+                    <input class="field_input" id="qc-name" name="name" type="text" autocomplete="name" required>
+                </div>
+
+                <div class="field">
+                    <label class="field_label" for="qc-email">Email</label>
+                    <input class="field_input" id="qc-email" name="email" type="email" autocomplete="email" required>
+                </div>
+
+                <div class="field">
+                    <label class="field_label" for="qc-msg">Message</label>
+                    <textarea class="field_textarea" id="qc-msg" name="message" rows="3" maxlength="300" placeholder="Up to 300 characters…" required></textarea>
+                </div>
+
+                <button class="button button_primary" type="submit">Send</button>
+                <p class="quick_contact_note">Prototype only — does not submit.</p>
+            </form>
+
+            <nav>
+                <h2 class="footer_heading">Sitemap</h2>
+                <ul class="footer_sitemap_list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="booking.html">Booking</a></li>
+                    <li><a href="entertain.html">Entertainment & Transportation</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <section class="footer-sources">
+
+            </section>
+        </section>
+    </footer>
+</body>
+</html>
